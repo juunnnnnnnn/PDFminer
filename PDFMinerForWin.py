@@ -5,7 +5,7 @@ from pdfminer.pdfpage import PDFPage
 from io import StringIO
 from glob import glob
 
-file_list = glob(r'C:\test\AI-OCR/*.pdf')
+file_list = glob(r'C:\Users\160800\Documents\OriXLifeInsurance\030_Digi-C\006_first_test_of_prottype\AI-OCR/*.pdf')
 
 def convert_pdf_to_txt(path):
     rsrcmgr = PDFResourceManager()
@@ -38,6 +38,6 @@ for item in file_list:
     
 allText = ','.join(result_list)
 
-file = open('pdf.txt','w' , encoding='UTF-8')
+file = open(r'C:\Users\160800\Documents\OriXLifeInsurance\030_Digi-C\006_first_test_of_prottype\AI-OCR\result\pdf.txt','w' , encoding='UTF-8')
 file.write(allText)
 print(allText)
